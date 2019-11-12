@@ -1,0 +1,21 @@
+[
+    {
+      "name": "${container_name}",
+      "image": "${image}",
+      "networkMode": "${network_mode}",
+      "environment": ${environment},
+      "portMappings": [{
+        "containerPort": ${container_port},
+        "hostPort": ${host_port},
+        "protocol": "tcp"
+      }],
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "${awslogs_group}",
+          "awslogs-region": "${awslogs_region}",
+          "awslogs-stream-prefix": "${awslogs_stream_prefix}"
+        }
+      }
+    }
+  ]
